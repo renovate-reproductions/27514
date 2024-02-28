@@ -3,19 +3,13 @@
   "extends": [
     "config:best-practices"
   ],
-  "ignorePresets": [
-    "docker:pinDigests"
-  ],
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "matchDatasources": [
-        "docker"
-      ],
       "matchFileNames": [
-        "**/!(.devcontainer)"
+        ".devcontainer/Dockerfile"
       ],
-      "pinDigests": true
+      "pinDigests": false
     }
   ]
 }
